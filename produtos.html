@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/gif" href="img/Icone_Do_Site.gif">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Produtos | Cabum</title>
+    <script>try{var t=localStorage.getItem('cabum-tema');if(t)document.documentElement.dataset.tema=t;}catch(e){}</script>
+</head>
+<body>
+<header class="topo">
+    <a class="marca" href="index.html"><img src="img/Icone_Do_Site.gif" alt="" width="48" height="48"><span>Cabum</span></a>
+    <button class="botao-icone menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="produtos.html" aria-current="page">Produtos</a>
+        <a href="produtos.html#pedido">Fazer pedido</a>
+    </nav>
+    <button class="botao-icone" id="tema-toggle" aria-pressed="false">Modo escuro</button>
+    <a class="botao-icone carrinho-btn" href="produtos.html#pedido">Carrinho<b data-cart-count>0</b></a>
+</header>
+<main class="conteudo">
+    <section class="secao" aria-labelledby="titulo-catalogo">
+        <h1 id="titulo-catalogo">Catálogo de hardware</h1>
+        <p>Busque, filtre por categoria e monte seu pedido. O carrinho é atualizado na hora, sem recarregar a página.</p>
+
+        <div class="ferramentas">
+            <div>
+                <label for="busca">Buscar produto</label>
+                <input type="text" id="busca" placeholder="Ex.: DDR5, 16 GB, processador" autocomplete="off">
+            </div>
+            <div>
+                <label for="ordem">Ordenar por</label>
+                <select id="ordem">
+                    <option value="nome">Nome (A–Z)</option>
+                    <option value="menor">Menor preço</option>
+                    <option value="maior">Maior preço</option>
+                </select>
+            </div>
+            <div class="filtros" role="group" aria-label="Filtrar por categoria">
+                <button type="button" class="chip" data-cat="todas" aria-pressed="true">Todas</button>
+                <button type="button" class="chip" data-cat="CPU" aria-pressed="false">CPU</button>
+                <button type="button" class="chip" data-cat="Placa-mãe" aria-pressed="false">Placa-mãe</button>
+                <button type="button" class="chip" data-cat="Memória RAM" aria-pressed="false">Memória RAM</button>
+                <button type="button" class="chip" data-cat="GPU" aria-pressed="false">GPU</button>
+            </div>
+        </div>
+        <p class="status" id="status-busca" role="status" aria-live="polite"></p>
+
+        <div class="grade" id="grade-produtos">
+            <article class="cartao" data-id="cpu-6n" data-nome="Processador 6 núcleos 3,7 GHz" data-cat="CPU" data-preco="1199.9">
+                <img src="img/CPU.webp" alt="CPU" width="200" height="200" loading="lazy">
+                <span class="categoria">CPU</span>
+                <h3>Processador 6 núcleos 3,7 GHz</h3>
+                <p class="descricao">Ótimo custo-benefício para trabalho e jogos em Full HD.</p>
+                <span class="preco">R$ 1.199,90</span>
+                <div class="acoes">
+                    <button type="button" class="botao add-carrinho">Adicionar</button>
+                    <a class="detalhe" href="Pagina_CPU.html">Saiba mais</a>
+                </div>
+            </article>
+            <article class="cartao" data-id="cpu-8n" data-nome="Processador 8 núcleos 4,2 GHz" data-cat="CPU" data-preco="1899.9">
+                <img src="img/CPU.webp" alt="CPU" width="200" height="200" loading="lazy">
+                <span class="categoria">CPU</span>
+                <h3>Processador 8 núcleos 4,2 GHz</h3>
+                <p class="descricao">Mais desempenho para edição de vídeo e multitarefa.</p>
+                <span class="preco">R$ 1.899,90</span>
+                <div class="acoes">
+                    <button type="button" class="botao add-carrinho">Adicionar</button>
+                    <a class="detalhe" href="Pagina_CPU.html">Saiba mais</a>
+                </div>
+            </article>
+            <article class="cartao" data-id="mb-b650" data-nome="Placa-mãe ATX DDR5" data-cat="Placa-mãe" data-preco="1249.9">
+                <img src="img/Placa_Mae.webp" alt="Placa-mãe" width="200" height="200" loading="lazy">
+                <span class="categoria">Placa-mãe</span>
+                <h3>Placa-mãe ATX DDR5</h3>
+                <p class="descricao">Quatro slots de memória, Wi-Fi e suporte a SSD NVMe.</p>
+                <span class="preco">R$ 1.249,90</span>
+                <div class="acoes">
+                    <button type="button" class="botao add-carrinho">Adicionar</button>
+                    <a class="detalhe" href="Pagina_Placa_Mae.html">Saiba mais</a>
+                </div>
+            </article>
+            <article class="cartao" data-id="mb-mini" data-nome="Placa-mãe Micro-ATX DDR4" data-cat="Placa-mãe" data-preco="599.9">
+                <img src="img/Placa_Mae.webp" alt="Placa-mãe" width="200" height="200" loading="lazy">
+                <span class="categoria">Placa-mãe</span>
+                <h3>Placa-mãe Micro-ATX DDR4</h3>
+                <p class="descricao">Compacta e econômica para montar um PC de escritório.</p>
+                <span class="preco">R$ 599,90</span>
+                <div class="acoes">
+                    <button type="button" class="botao add-carrinho">Adicionar</button>
+                    <a class="detalhe" href="Pagina_Placa_Mae.html">Saiba mais</a>
+                </div>
+            </article>
+            <article class="cartao" data-id="ram-16" data-nome="Memória RAM 16 GB DDR4 3200 MHz" data-cat="Memória RAM" data-preco="289.9">
+                <img src="img/Memoria_Ram.png" alt="Memória RAM" width="200" height="200" loading="lazy">
+                <span class="categoria">Memória RAM</span>
+                <h3>Memória RAM 16 GB DDR4 3200 MHz</h3>
+                <p class="descricao">Pente único de 16 GB com dissipador de alumínio.</p>
+                <span class="preco">R$ 289,90</span>
+                <div class="acoes">
+                    <button type="button" class="botao add-carrinho">Adicionar</button>
+                    <a class="detalhe" href="Pagina_Memoria_Ram.html">Saiba mais</a>
+                </div>
+            </article>
+            <article class="cartao" data-id="ram-32" data-nome="Kit RAM 32 GB (2x16) DDR5" data-cat="Memória RAM" data-preco="749.9">
+                <img src="img/Memoria_Ram.png" alt="Memória RAM" width="200" height="200" loading="lazy">
+                <span class="categoria">Memória RAM</span>
+                <h3>Kit RAM 32 GB (2x16) DDR5</h3>
+                <p class="descricao">Kit dual channel de alta frequência para PCs modernos.</p>
+                <span class="preco">R$ 749,90</span>
+                <div class="acoes">
+                    <button type="button" class="botao add-carrinho">Adicionar</button>
+                    <a class="detalhe" href="Pagina_Memoria_Ram.html">Saiba mais</a>
+                </div>
+            </article>
+            <article class="cartao" data-id="gpu-8" data-nome="Placa de vídeo 8 GB GDDR6" data-cat="GPU" data-preco="2299.9">
+                <img src="img/GPU.png" alt="GPU" width="200" height="200" loading="lazy">
+                <span class="categoria">GPU</span>
+                <h3>Placa de vídeo 8 GB GDDR6</h3>
+                <p class="descricao">Jogos em Full HD e QHD com ótima eficiência.</p>
+                <span class="preco">R$ 2.299,90</span>
+                <div class="acoes">
+                    <button type="button" class="botao add-carrinho">Adicionar</button>
+                    <a class="detalhe" href="Pagina_GPU.html">Saiba mais</a>
+                </div>
+            </article>
+            <article class="cartao" data-id="gpu-16" data-nome="Placa de vídeo 16 GB GDDR6" data-cat="GPU" data-preco="4199.9">
+                <img src="img/GPU.png" alt="GPU" width="200" height="200" loading="lazy">
+                <span class="categoria">GPU</span>
+                <h3>Placa de vídeo 16 GB GDDR6</h3>
+                <p class="descricao">Para jogos em 4K, renderização 3D e inteligência artificial.</p>
+                <span class="preco">R$ 4.199,90</span>
+                <div class="acoes">
+                    <button type="button" class="botao add-carrinho">Adicionar</button>
+                    <a class="detalhe" href="Pagina_GPU.html">Saiba mais</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="secao" id="pedido" aria-labelledby="titulo-pedido">
+        <h2 id="titulo-pedido">Solicitar pedido ou orçamento</h2>
+        <div class="pedido">
+            <div class="painel">
+                <h3>Seu carrinho</h3>
+                <ul class="carrinho-lista" id="carrinho-lista" aria-live="polite"></ul>
+                <p class="total"><span>Total</span> <span id="carrinho-total">R$ 0,00</span></p>
+            </div>
+
+            <form class="painel" id="form-pedido" novalidate>
+                <h3>Seus dados</h3>
+                <input type="hidden" name="carrinho" id="carrinho-json" value="{}">
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" required autocomplete="name" aria-describedby="erro-nome">
+                    <p class="erro-campo" id="erro-nome"></p>
+                </div>
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="erro-email">
+                    <p class="erro-campo" id="erro-email"></p>
+                </div>
+                <div class="campo">
+                    <label for="telefone">Telefone com DDD</label>
+                    <input type="tel" id="telefone" name="telefone" required autocomplete="tel" inputmode="numeric" placeholder="(75) 99999-9999" aria-describedby="erro-telefone">
+                    <p class="erro-campo" id="erro-telefone"></p>
+                </div>
+                <div class="campo">
+                    <label for="tipo">Tipo de solicitação</label>
+                    <select id="tipo" name="tipo">
+                        <option value="Pedido de compra">Pedido de compra</option>
+                        <option value="Orçamento">Orçamento</option>
+                        <option value="Dúvida técnica">Dúvida técnica</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="mensagem">Mensagem (opcional)</label>
+                    <textarea style="resize: none;"id="mensagem" name="mensagem" rows="4" maxlength="500" aria-describedby="erro-mensagem"></textarea>
+                    <span class="ajuda" id="contador-msg">0/500</span>
+                    <p class="erro-campo" id="erro-mensagem"></p>
+                </div>
+                <p class="erro-campo" id="erro-pedido" role="alert"></p>
+                <button type="submit" class="botao">Enviar solicitação</button>
+            </form>
+        </div>
+    </section>
+</main>
+<footer class="rodape">
+    <p>&copy; 2026 Cabum &ndash; Loja de tecnologia. Protótipo desenvolvido por Gabriel Gusmão para o Projeto Final SENAI (CQPG). Preços fictícios.</p>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

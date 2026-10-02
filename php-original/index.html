@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/gif" href="img/Icone_Do_Site.gif">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Início | Cabum</title>
+    <script>try{var t=localStorage.getItem('cabum-tema');if(t)document.documentElement.dataset.tema=t;}catch(e){}</script>
+</head>
+<body>
+<header class="topo">
+    <a class="marca" href="index.html"><img src="img/Icone_Do_Site.gif" alt="" width="48" height="48"><span>Cabum</span></a>
+    <button class="botao-icone menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+        <a href="index.html" aria-current="page">Início</a>
+        <a href="produtos.php">Produtos</a>
+        <a href="produtos.php#pedido">Fazer pedido</a>
+    </nav>
+    <button class="botao-icone" id="tema-toggle" aria-pressed="false">Modo escuro</button>
+    <a class="botao-icone carrinho-btn" href="produtos.php#pedido">Carrinho<b data-cart-count>0</b></a>
+</header>
+<main class="conteudo">
+    <section class="hero secao">
+        <div>
+            <h1>Cabum: a loja de tecnologia para montar o PC que você quer</h1>
+            <p>Processadores, placas-mãe, memórias e placas de vídeo com os melhores preços do mercado. Escolha suas peças, monte o carrinho e peça seu orçamento em poucos cliques.</p>
+            <p><a class="botao" href="produtos.php">Ver catálogo</a> <a class="botao secundario" href="produtos.php#pedido">Fazer pedido</a></p>
+        </div>
+        <img src="img/Icone_Do_Site.gif" alt="Logo da Cabum" width="260" height="260">
+    </section>
+
+    <section class="secao" aria-labelledby="destaques">
+        <h2 id="destaques">Produtos em destaque</h2>
+        <div class="grade">
+            <a class="cartao destaque" href="Pagina_CPU.html">
+                <img src="img/CPU.webp" alt="CPU" width="200" height="200">
+                <p>CPU</p>
+            </a>
+            <a class="cartao destaque" href="Pagina_Placa_Mae.html">
+                <img src="img/Placa_Mae.webp" alt="Placa-mãe" width="200" height="200">
+                <p>Placa-mãe</p>
+            </a>
+            <a class="cartao destaque" href="Pagina_Memoria_Ram.html">
+                <img src="img/Memoria_Ram.png" alt="Memória RAM" width="200" height="200">
+                <p>Memória RAM</p>
+            </a>
+            <a class="cartao destaque" href="Pagina_GPU.html">
+                <img src="img/GPU.png" alt="GPU" width="200" height="200">
+                <p>GPU</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="secao beneficios" aria-label="Vantagens da Cabum">
+        <div class="painel"><h3>Peças selecionadas</h3><p>Hardware para escritório, jogos e criação de conteúdo, com descrição clara de cada componente.</p></div>
+        <div class="painel"><h3>Pedido sem complicação</h3><p>Adicione itens ao carrinho, veja o total na hora e envie sua solicitação pelo formulário.</p></div>
+        <div class="painel"><h3>Atendimento por contato</h3><p>Após o envio, você recebe um protocolo e a confirmação dos dados informados.</p></div>
+    </section>
+</main>
+<footer class="rodape">
+    <p>&copy; 2026 Cabum &ndash; Loja de tecnologia. Protótipo desenvolvido por Gabriel Gusmão para o Projeto Final SENAI (CQPG). Preços fictícios.</p>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
